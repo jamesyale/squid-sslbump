@@ -5,8 +5,8 @@ A caching proxy server to selectively MITM SSL connections to cache the content.
 
 To build: 
 
-docker build -t jamesyale/squid-sslbump .
+    docker build -t jamesyale/squid-sslbump .
 
 To run: 
 
-docker run -d --name squid-sslbump -v /path/to/git/repo/squid-config:/etc/squid
+    docker run -d --name squid-sslbump -v `pwd`/squid-config:/etc/squid

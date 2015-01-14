@@ -9,4 +9,4 @@ To build:
 
 To run: 
 
-    docker run -d --name squid-sslbump -v `pwd`/squid-config:/etc/squid
+    docker run -d --name squid-sslbump -p 3128:3128 -v `pwd`/squid-config:/etc/squid jamesyale/squid-sslbump

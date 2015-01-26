@@ -27,4 +27,4 @@ EXPOSE 3128
 
 VOLUME ["/var/log"]
 
-CMD ["/usr/sbin/squid", "-N", "-X", "-f", "/etc/squid/squid.ssl.conf"]
+CMD ["/usr/sbin/squid", "-N", "-f", "/etc/squid/squid.ssl.conf"]

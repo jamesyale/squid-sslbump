@@ -7,17 +7,6 @@ ENV https_proxy http://proxy.uk.specsavers.com:8080
 ENV HTTP_PROXY http://proxy.uk.specsavers.com:8080
 ENV HTTPS_PROXY http://proxy.uk.specsavers.com:8080
 
-
-#RUN apt-get -y update \
-#  && apt-get -y upgrade \
-#  && apt-get -y install squid \
-#  && apt-get clean
-
-#RUN apt-get -y update \
-#  && apt-get -y upgrade \
-#  && apt-get -y install squid \
-#  && apt-get clean
-
 COPY ngtech-squid.repo /etc/yum.repos.d/ngtech-squid.repo
 
 RUN yum update -y && yum install -y epel-release && yum clean -y all
@@ -38,4 +27,4 @@ EXPOSE 3128
 
 VOLUME ["/var/log"]
 
-CMD ["/usr/sbin/squid", "-d1", "-N", "-X", "-f", "/etc/squid/squid.ssl.conf"]
+CMD ["/usr/sbin/squid", "-N", "-X", "-f", "/etc/squid/squid.ssl.conf"]

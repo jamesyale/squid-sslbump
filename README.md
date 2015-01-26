@@ -3,6 +3,8 @@ Squid ssl-bump caching proxy
 
 A caching proxy server to selectively MITM SSL connections to cache the content. Objective is to speed up delivery rather than spy on people. 
 
+Sample config available in the github repo @ https://github.com/jamesyale/squid-sslbump
+
 To build: 
 
     docker build -t jamesyale/squid-sslbump .
